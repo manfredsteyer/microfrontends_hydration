@@ -15,12 +15,11 @@ export class IslandComponent {
     lazy: true,
 
     client: {
-      threshold: 0.67,
+      threshold: 0.66,
       exposedModule: './Component',
       export: 'FlightsSearchComponent',
     }
   };
-
 
   optionsReact: SsrProxyOptions = {
     remote: 'react',
