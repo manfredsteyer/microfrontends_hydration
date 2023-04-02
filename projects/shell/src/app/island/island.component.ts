@@ -15,6 +15,7 @@ export class IslandComponent {
     lazy: true,
 
     client: {
+      threshold: 0.67,
       exposedModule: './Component',
       export: 'FlightsSearchComponent',
     }
@@ -29,6 +30,7 @@ export class IslandComponent {
     lazy: true,
 
     client: {
+      threshold: 0.33,
       type: 'CustomElement',
       exposedModule: './web-components',
     }

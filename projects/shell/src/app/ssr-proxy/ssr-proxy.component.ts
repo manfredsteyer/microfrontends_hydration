@@ -27,6 +27,7 @@ export interface SsrProxyOptions {
     exposedModule: string;
     export?: string;
     type?: 'Angular' | 'CustomElement';
+    threshold?: number;
   };
 }
 
@@ -71,7 +72,7 @@ export class SsrProxyComponent implements OnInit {
   private initIntersectionObserver(data: SsrProxyOptions) {
     const options: IntersectionObserverInit = {
       root: null,
-      threshold: 0.5,
+      threshold: data.client?.threshold ?? 0.5
     };
 
     const io = new IntersectionObserver((e) => {
